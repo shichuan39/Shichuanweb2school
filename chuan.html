@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>chuan</title>
+   
+    <!---诗川css资源库模版3--->
+<style>
+   
+     nav {
+      display: flex;
+      justify-content: left;
+      gap: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(40px);
+      border-radius: 16px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: rgb(17, 17, 17);
+      font-size: 18px;
+      cursor: pointer;
+      padding: 8px 20px;
+      border-radius: 16px;
+      transition: 0.7s;
+      font-family: inherit;
+    }
+
+    nav button:hover {
+      background: rgba(255, 255, 255, 0.075);
+    }
+
+    nav button.active {
+      background: white;
+      color: #ff0000;
+      transform: scale(1.1);
+    }
+
+    .page {
+      display: none;          
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    .page.active {
+      display: block;         
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<!---rest van de css--->
+<style>
+   
+ .project-item1{
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 21px;
+        box-shadow: 1px 8px 32px rgba(0, 0, 0, 0.1);
+        gap: 30px;
+        padding: 15px 31px;
+        display: flex;
+    }
+     body {
+        background-color: rgba(255, 201, 201, 0.267);
+    }
+
+    </style>
+
+  <nav>
+    <div class="project-item1">
+    <button class="active" onclick="showPage('home', this)">Home</button>
+    <button onclick="showPage('about', this)">About</button>
+    <button onclick="showPage('contact', this)">Contact</button>
+    </div>
+  </nav>
+</head>
+ 
+
+
+
+
+
+
+
+<body>
+
+<!---inhoud 2 kolom--->
+
+   
+ 
+   
+    <!---inhoud--->
+    <div class="page active" id="home">
+    <p>TYZShichuan</p>
+    </div>
+
+    <div class="page" id="about">
+        <p>About Us</p>
+    </div>
+
+    <div class="page" id="contact">
+        <p>Contact Us</p>
+    </div>
+    
+</body>
+
+
+
+
+
+
+
+
+<!---javascript AI--->
+<script>
+     function showPage(id, btn) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+</script>
+</html>
