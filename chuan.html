@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8" />
     <title>chuan</title>
+
+    <!---诗川3D Model 展示器--->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
    
     <!---诗川css资源库模版3--->
 <style>
    
      nav {
       display: flex;
-      justify-content: left;
+      justify-content: center;
+      margin-left: 20px;
       gap: 30px;
       padding: 20px;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(40px);
-      border-radius: 16px;
+      border-radius: 21px;
+      width: 370px;
+      box-shadow: 1px 8px 32px rgba(0, 0, 0, 0.1);
     }
 
     nav button {
@@ -30,11 +36,11 @@
     }
 
     nav button:hover {
-      background: rgba(255, 255, 255, 0.075);
+      background: rgba(255, 255, 255, 0.021);
     }
 
     nav button.active {
-      background: white;
+      background: rgba(0, 0, 0, 0.096);
       color: #ff0000;
       transform: scale(1.1);
     }
@@ -69,14 +75,45 @@
         padding: 15px 31px;
         display: flex;
     }
+    .project-item2{
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 21px;
+        width: 346px;
+        box-shadow: 1px 8px 32px rgba(0, 0, 0, 0.1);
+        gap: 30px;
+        padding: 15px 31px;
+        margin-left: 20px;
+        display: flex;
+    }
      body {
-        background-color: rgba(255, 201, 201, 0.267);
+        background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #00000018, #0000007a);
     }
 
     </style>
 
+
+
+ <!---structuur voor mobiel en tablet--->
+    <style>
+@media (max-width: 768px) {
+   nav {
+      display: flex;
+      justify-content: left;
+      gap: 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(40px);
+      border-radius: 21px;
+      box-shadow: 1px 8px 32px rgba(0, 0, 0, 0.1);
+    }
+ 
+}
+    </style>
+
   <nav>
-    <div class="project-item1">
+    <div>
     <button class="active" onclick="showPage('home', this)">Home</button>
     <button onclick="showPage('about', this)">About</button>
     <button onclick="showPage('contact', this)">Contact</button>
@@ -95,12 +132,13 @@
 
 <!---inhoud 2 kolom--->
 
-   
+<div class="project-item2" style="margin-top: 20px;"> IRad phone</div>
  
    
     <!---inhoud--->
     <div class="page active" id="home">
     <p>TYZShichuan</p>
+    <p>Fabian</p>
     </div>
 
     <div class="page" id="about">
