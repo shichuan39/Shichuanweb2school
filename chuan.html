@@ -31,7 +31,7 @@
       cursor: pointer;
       padding: 8px 20px;
       border-radius: 16px;
-      transition: 0.7s;
+      transition: all 0.7s cubic-bezier(.24,.34,0,1.44);
       font-family: inherit;
     }
 
@@ -86,6 +86,7 @@
         padding: 15px 31px;
         margin-left: 20px;
         display: flex;
+    
     }
      body {
         background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #00000018, #0000007a);
@@ -95,7 +96,7 @@
 
 
 
- <!---structuur voor mobiel en tablet--->
+ <!---enable structuur voor mobiel en tablet--->
     <style>
 @media (max-width: 768px) {
    nav {
@@ -133,12 +134,19 @@
 <!---inhoud 2 kolom--->
 
 <div class="project-item2" style="margin-top: 20px;"> IRad phone</div>
- 
+
    
     <!---inhoud--->
     <div class="page active" id="home">
-    <p>TYZShichuan</p>
-    <p>Fabian</p>
+
+      <model-viewer 
+    src="glbmodel/ITphone RAd1.glb" 
+    alt="iRad phone 3D 模型" 
+    auto-rotate
+    rotation-per-second="60deg"
+    shadow-intensity="1"
+    style="width: 50%; height: 500px; border-radius: 35px;  margin-left: auto; margin-right: auto; background-color: rgba(0,0,0,0.05); box-shadow: 1px 8px 32px rgba(0, 0, 0, 0.1);">
+</model-viewer>
     </div>
 
     <div class="page" id="about">
@@ -147,6 +155,8 @@
 
     <div class="page" id="contact">
         <p>Contact Us</p>
+        <p>TYZShichuan</p>
+        <p>Fabian</p>
     </div>
     
 </body>
