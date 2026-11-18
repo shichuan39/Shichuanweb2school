@@ -90,7 +90,9 @@
     }
      body {
         background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #00000018, #0000007a);
+       
     }
+   
 
     </style>
 
@@ -131,34 +133,43 @@
 
 <body>
 
-<!---inhoud 2 kolom--->
+    <div>
+    
+        <!-- 卡片 -->
+        <div class="project-item2" style="margin-top: 20px;"> IRad phone</div>
 
-<div class="project-item2" style="margin-top: 20px;"> IRad phone</div>
+       
+        <div class="page active" id="home">
+            <h1 style="text-align: center; margin: center; scale: 1.2;">Welcome</h1>
+            <p style="background-color: rgb(56, 109, 255); border-radius: 35px; padding: 10px; width: 90px; color: white;">shop</p>
+             <!--3D -->
+    <div  style=" scale:0.6;">
+        
+        <!-- glb model -->
+        <model-viewer 
+            src="glbmodel/ITphone RAd1.glb" 
+            alt="iRad phone 3D 模型" 
+            auto-rotate
+            rotation-per-second="60deg"
+            shadow-intensity="1"
+            style="width: 100%; height: 80vh; border-radius: 45px; ">
+        </model-viewer>
+   </div>
+        </div>
+
+        <div class="page" id="about">
+            <p style="text-align: left; margin-left: 20px;">About Us</p >
+        </div>
+
+        <div class="page" id="contact">
+            <p style="text-align: left; margin-left: 20px;">Contact Us</p >
+            <p style="text-align: left; margin-left: 20px;">TYZShichuan & Fabian</p >
+        </div>
+    </div>
+
 
    
-    <!---inhoud--->
-    <div class="page active" id="home">
 
-      <model-viewer 
-    src="glbmodel/ITphone RAd1.glb" 
-    alt="iRad phone 3D 模型" 
-    auto-rotate
-    rotation-per-second="60deg"
-    shadow-intensity="1"
-    style="width: 50%; height: 500px; border-radius: 35px;  margin-left: auto; margin-right: auto; background-color: rgba(0,0,0,0.05); box-shadow: 1px 8px 32px rgba(0, 0, 0, 0.1);">
-</model-viewer>
-    </div>
-
-    <div class="page" id="about">
-        <p>About Us</p>
-    </div>
-
-    <div class="page" id="contact">
-        <p>Contact Us</p>
-        <p>TYZShichuan</p>
-        <p>Fabian</p>
-    </div>
-    
 </body>
 
 
